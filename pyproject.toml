@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "checkpoint-recovery-economics"
+version = "0.1.0"
+description = "Checkpoint placement as an economic decision for long agent runs: an optimiser that minimises checkpoint cost plus expected recompute after failure, recovery half-life measurement, and an auditor that prices recovery waste in recorded traces."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amna Raheeba" }]
+
+[tool.setuptools]
+packages = ["checkpoint_econ"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
